@@ -1,338 +1,70 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>JQuery Mobile</title>
-        <meta name="viewport" content="width=device-width,user-scalable=no" />
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
-        <script src="js/jquery.js"></script>
-        <script src="js/config.js"></script>
-        <script>
-            $(document).bind("mobileinit", function(){
-               setTimeout(function(){
-                   $.mobile.changePage("#page2", {
-                       reverse: true,
-                       showLoadMsg: false,
-                       transition: 'flip'
-                   })
-               }, 2000); 
-            });
-        </script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    </head>
-    <body>
-        <div data-role="page" data-theme="a" id="page1">
-            <div data-role="header" data-position="fixed">
-                <h1>JQuery Mobile</h1>
-                <a href="pagina2.html" data-ajax="false">Link</a>
-                <a href="#page2" data-role="none">Link</a>
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#" data-icon="arrow-l" class="ui-btn-active">Primero</a></li>
-                        <li><a href="#" data-icon="arrow-r">Segundo</a></li>
-                        <li><a href="#" data-icon="arrow-l">Tercero</a></li>
-                        <li><a href="#" data-icon="arrow-r">Cuarto</a></li>
-                        <li><a href="#" data-icon="arrow-l">Quinto</a></li>
-                        <li><a href="#" data-icon="arrow-r">Sexto</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div data-role="content">
-                <p>Esto es un texto dentro de una página</p>
-                <a href="#page2" data-role="button">Colapsable (default)</a>
-                <a href="#page3" data-transition="slide" data-role="button">Acordeon (slide)</a>
-                <a href="#page4" data-transition="slideup" data-role="button">Grid (slideup)</a>
-                <a href="#page5" data-transition="slidedown" data-role="button">Listview (slidedown)</a>
-                <a href="#page6" data-transition="pop" data-role="button">Listview Anidado (pop)</a>
-                <a href="#page7" data-transition="fade" data-role="button">Listview divider (fade)</a>
-                <a href="#page8" data-transition="flip" data-role="button">Formulario (flip)</a>
-                <a href="#confirmacion" data-rel="dialog" data-role="button" data-theme="b">Eliminar</a>
-                <a href="http://www.video2brain.com"  data-rel="external" data-role="button" data-inline="true" data-theme="b">Ir a pagina 3(Externo)</a>
-            </div>
-            <div data-role="footer" class="ui-bar" data-position="fixed">
-                <div data-role="controlgroup" data-type="horizontal">
-                    <a href="#page2" data-icon="plus">Agregar</a>
-                    <a href="#page2" data-icon="delete">Eliminar</a>
-                    <a href="#page2">Refrescar</a>
-                </div>
-            </div>
-        </div>
-        
-        <div data-role="page" data-theme="a" id="confirmacion">
-            <div data-role="header">
-                <h1>Eliminar</h1>
-            </div>
-            <div data-role="content">
-                <a href="#page1" data-role="button" data-rel="back">Si, Eliminar</a>
-                <a href="#page1" data-role="button" data-rel="back">Cancelar</a>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-        
-        
-        <div data-role="page" data-theme="a" id="page2" data-add-back-btn="true">
-            <div data-role="header">
-                <h1>Segunda página ()</h1>
-                <a href="#page1">Atras</a>
-            </div>
-            <div data-role="content">
-                <div data-role="collapsible" data-collapsed="false">
-                    <h2>Festival de Cine</h2>
-                    <h3>Titulo</h3>
-                    <p>
-                        Despues de haber apoyado a diferentes artistas, hoy ellos nos apoyan realizando
-                        un festival de cine completamenta gratis para todas las personas registradas en
-                        nuestra pagina web www.festivaldelcine.com
-                    </p>
-                </div>
-                <div data-role="collapsible" data-theme="b">
-                    <h2>Festival de Cine</h2>
-                    <p>
-                        Despues de haber apoyado a diferentes artistas, hoy ellos nos apoyan realizando
-                        un festival de cine completamenta gratis para todas las personas registradas en
-                        nuestra pagina web www.festivaldelcine.com
-                    </p>
-                </div>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-        
-        <div data-role="page" data-theme="a" id="page3" data-add-back-btn="true">
-            <div data-role="header">
-                <h1>Tercera página (Acordeon)</h1>
-                <a href="#page1">Atras</a>
-            </div>
-            <div data-role="content">
-                <div data-role="collapsible-set">
-                    <div data-role="collapsible" data-collapsed="false">
-                        <h2>Festival de Cine</h2>
-                        <h3>Titulo</h3>
-                        <p>
-                            Despues de haber apoyado a diferentes artistas, hoy ellos nos apoyan realizando
-                            un festival de cine completamenta gratis para todas las personas registradas en
-                            nuestra pagina web www.festivaldelcine.com
-                        </p>
-                    </div>
-                    <div data-role="collapsible" data-theme="b">
-                        <h2>Festival de Cine</h2>
-                        <h3>Titulo</h3>
-                        <p>
-                            Despues de haber apoyado a diferentes artistas, hoy ellos nos apoyan realizando
-                            un festival de cine completamenta gratis para todas las personas registradas en
-                            nuestra pagina web www.festivaldelcine.com
-                        </p>
-                    </div>
-                    <div data-role="collapsible">
-                        <h2>Festival de Cine</h2>
-                        <h3>Titulo</h3>
-                        <p>
-                            Despues de haber apoyado a diferentes artistas, hoy ellos nos apoyan realizando
-                            un festival de cine completamenta gratis para todas las personas registradas en
-                            nuestra pagina web www.festivaldelcine.com
-                        </p>
-                    </div>
-                    <div data-role="collapsible">
-                        <h2>Festival de Cine</h2>
-                        <p>
-                            Despues de haber apoyado a diferentes artistas, hoy ellos nos apoyan realizando
-                            un festival de cine completamenta gratis para todas las personas registradas en
-                            nuestra pagina web www.festivaldelcine.com
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-        
-        <div data-role="page" data-theme="a" id="page4" data-add-back-btn="true">
-            <div data-role="header">
-                <h1>Cuarta página (grid)</h1>
-                <a href="#page1">Atras</a>
-            </div>
-            <div data-role="content">
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <a href="#" data-role="button">Aceptar</a>
-                    </div>
-                    <div class="ui-block-b">
-                        <a href="#" data-role="button">Cancelar</a>
-                    </div>
-                </div>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-        
-        <div data-role="page" data-theme="a" id="page5" data-add-back-btn="true">
-            <div data-role="header">
-                <h1>Quinta página (listview)</h1>
-                <a href="#page1">Atras</a>
-            </div>
-            <div data-role="content">
-                <h2>Cursos de Programacion</h2>
-                <ul data-role="listview">
-                    <li><a href="#page2">C sharp</a></li>
-                    <li>Visual Basic</li>
-                    <li>PHP</li>
-                    <li>Python</li>
-                    <li>Objective-C</li>
-                </ul>
-                <h2>Cursos de Diseño</h2>
-                <ul data-role="listview" data-inset="true">
-                    <li><a href="#page2">Photoshop</a></li>
-                    <li><a href="#page2">Corel Draw</a></li>
-                    <li>Illustrator</li>
-                    <li>Indesing</li>
-                </ul>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-        
-        <div data-role="page" data-theme="a" id="page6" data-add-back-btn="true">
-            <div data-role="header">
-                <h1>Sexta página (listview anidado)</h1>
-                <a href="#page1">Atras</a>
-            </div>
-            <div data-role="content">
-                <ul data-role="listview">
-                    <li>Cursos de Programacion
-                        <ul>
-                            <li>C sharp</li>
-                            <li>Visual Basic</li>
-                            <li>PHP</li>
-                            <li>Python</li>
-                            <li>Objective-C</li>
-                        </ul>
-                    </li>
-                    <li>Cursos de Diseño</li>
-                    <li>Ofimatica</li>
-                </ul>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-        
-        <div data-role="page" data-theme="a" id="page7" data-add-back-btn="true">
-            <div data-role="header">
-                <h1>Septima página (listview anidado)</h1>
-                <a href="#page1">Atras</a>
-            </div>
-            <div data-role="content">
-                <ul data-role="listview" data-dividertheme="a" data-theme="a" data-filter="true" 
-                data-filter-placeholder="Buscar cursos">
-                    <li data-role="list-divider">Cursos de Programacion
-                    <li><a href="#page5">C sharp</a>
-                        <a href="#page6">Editar</a>
-                    </li>
-                    <li>Visual Basic <span class="ui-li-count">25</span></li>
-                    <li>PHP</li>
-                    <li><a href="#page5">Python<p class="ui-li-aside">10.000</p></a></li>
-                    <li>Objective-C</li>
-                    <li data-role="list-divider">Cursos de Diseño</li>
-                    <li><a href="#page6"><img src="img/icon-big.png"> Photoshop</a></li>
-                    <li>Corel Draw</li>
-                    <li>
-                        <h3>Illustrator</h3>
-                        <p>El mejor programa para aprender</p>
-                    </li>
-                    <li>Indesing</li>
-                    <li data-role="list-divider">Ofimatica</li>
-                    <li><a href="#page3"><img src="img/icon-small.png" class="ui-li-icon"> Word</a></li>
-                    <li>Excel</li>
-                </ul>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-        
-        <div data-role="page" data-theme="a" id="page8" data-add-back-btn="true">
-            <div data-role="header">
-                <h1>Octava página (formulario)</h1>
-                <a href="#page1">Atras</a>
-            </div>
-            <div data-role="content">
-                <form action="" method="GET">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre">
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                    
-                    <label for="comentarios">Comentarios</label>
-                    <textarea id="comentarios" name="comentarios"></textarea>
-                    
-                    <label for="edad">Edad</label>
-                    <input type="range" min="0" max="120" id="edad" name="edad">
-                    
-                    <fielset data-role="controlgroup">
-                        <legend>Seleccione su estado civil</legend>
-                        <input type="radio" name="estadocivil" id="soltero" checked><label for="soltero">Soltero/a</label>
-                        <input type="radio" name="estadocivil" id="casado"><label for="casado">Casado/a</label>
-                        <input type="radio" name="estadocivil" id="divorciado"><label for="divorciado">Divorciado/a</label>
-                    </fielset>
-                    
-                    <label for="suscribe">Te suscribes?</label>
-                    <select name="suscribe" id="suscribe" data-role="slider">
-                        <option value="">Si</option>
-                        <option value="">No</option>
-                    </select>
-                    
-                    <label for="gustos">Gustos</label>
-                    <select name="gustos" id="gustos" data-native-menu="false" multiple>
-                        <option data-placehilder="true">Gustos</option>
-                        <option value="1">Tecnologia</option>
-                        <option value="2">Comida</option>
-                        <option value="3">Deportes</option>
-                    </select>
-                    
-                    <label for="pais">Pais</label>
-                    <select name="pais" id="pais" data-native-menu="false" data-theme="b">
-                        <optgroup label="America">
-                            <option value="AR">Argentina</option>
-                            <option value="PE">Perú</option>
-                        </optgroup>
-                        <optgroup label="Europa">
-                            <option value="ES">España</option>
-                        </optgroup>
-                    </select>
-                    
-                    <fielset data-role="controlgroup">
-                        <leyend for="fecNacimiento">Fecha de Nacimiento</leyend>
-                        <select name="dia" id="dia">
-                            <option>Dia</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
-                        <select name="mes" id="mes" data-native-menu="false">
-                            <option>Mes</option>
-                            <option value="1">Enero</option>
-                            <option value="2">Febrero</option>
-                            <option value="3">Marzo</option>
-                        </select>
-                        <select name="anio" id="anio">
-                            <option>Año</option>
-                            <option>1980</option>
-                            <option>1981</option>
-                            <option>1982</option>
-                        </select>
-                    </fielset>
-                </form>
-            </div>
-            <div data-role="footer">
-                <h4>www.jquerymobile.com</h4>
-            </div>
-        </div>
-    </body>
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no" />
+  <title>title</title>
+  <style type="text/css">
+  	#saltar,#atras,#adelante {
+	    width: 70px;
+	    height: 70px;
+	    background-color: rgba(0,0,0,0.2);
+	    position: fixed;
+	    bottom: 20px;
+	    border-radius: 50%;
+	}
+
+	#saltar {
+	    left: 20px;
+	}
+
+	#atras {
+	    right: 100px;
+	}
+
+	#adelante {
+	    right: 20px;
+	}
+  </style>
+</head>
+<body>
+	<div id="game"></div>
+	<div id="saltar"></div>
+	<div id="atras"></div>
+	<div id="adelante"></div>
+	<script type="text/javascript" src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script type="text/javascript" src="js/kinetic-v5.1.0.js"></script>
+  <script type="text/javascript" src="js/heroe.js"></script>
+  <script type="text/javascript" src="js/enemigo.js"></script>
+  <script type="text/javascript" src="js/plataforma.js"></script>
+  <script type="text/javascript" src="js/moneda.js"></script>
+  <script type="text/javascript" src="js/puerta.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script>
+  var Preloader;
+	var imgsAssets = ['imgs/heroe.jpg'];
+	window.addEventListener('load',function () {
+		Preloader = new createjs.LoadQueue();
+		Preloader.onProgress = progresoCarga;
+		Preloader.loadManifest(['imgs/heroe.jpg']);
+	    Preloader.on("complete", handleComplete, this);
+	    function handleComplete() {
+	            nivelUno();
+	      }
+		//cargar();
+	});
+	function cargar(){
+		
+		while(imgsAssets.length > 0){
+			var url = imgsAssets.shift();
+			Preloader.loadFile(url);
+		}
+	}
+	function progresoCarga(){
+		if(Preloader.progress == 1){
+			nivelUno();
+		}
+	}
+  </script>
+</body>
 </html>
